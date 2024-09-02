@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS Grid Layout */
-        #notes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        /* Optional: Custom styling */
-        note-item {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container my-5">
-        <!-- App Bar -->
-        <app-bar></app-bar>
 
-        <!-- Note Form -->
-        <form id="note-form" class="mb-5">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container my-4">
+    <h1 class="text-center mb-4">Notes App</h1>
+
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#noteModal">
+      Add a New Note
+    </button>
+
+    <!-- Notes List -->
+    <div id="notesContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Notes will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <!-- Add Note Modal -->
+  <div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="noteModalLabel">Add a New Note</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="noteForm">
             <div class="mb-3">
-                <label for="note-title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="note-title" required>
+              <label for="noteTitle" class="form-label">Title</label>
+              <input type="text" class="form-control" id="noteTitle" required>
+              <div id="titleError" class="invalid-feedback">Title is required.</div>
             </div>
             <div class="mb-3">
-                <label for="note-body" class="form-label">Body</label>
-                <textarea class="form-control" id="note-body" rows="3" required></textarea>
+              <label for="noteBody" class="form-label">Body</label>
+              <textarea class="form-control" id="noteBody" rows="3" required></textarea>
+              <div id="bodyError" class="invalid-feedback">Body is required.</div>
             </div>
             <button type="submit" class="btn btn-primary">Add Note</button>
-        </form>
-
-        <!-- Notes Container -->
-        <div id="notes-container"></div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sample-notes.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

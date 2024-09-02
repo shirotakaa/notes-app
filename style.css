@@ -1,55 +1,41 @@
 body {
+    background-color: #f0f2f5;
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
 }
 
-nav {
-    background-color: #ff6f61;
-    color: white;
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.note-item {
     background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
 }
 
-.card-body {
-    padding: 20px;
+.note-item:hover {
+    transform: scale(1.02);
 }
 
-h5.card-title {
-    font-size: 1.25rem;
-    color: #ff6f61;
+.note-item h5 {
+    font-weight: 600;
 }
 
-#note-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.note-item p {
+    margin-bottom: 0.5rem;
+    color: #6c757d;
 }
 
-.is-invalid {
-    border-color: #dc3545;
+.note-item small {
+    color: #adb5bd;
 }
 
-.is-invalid:focus {
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #note-form {
-        padding: 15px;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-
-    h5.card-title {
-        font-size: 1rem;
-    }
+.form-label {
+    font-weight: 600;
 }
