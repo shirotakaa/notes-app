@@ -57,7 +57,7 @@ function handleDeleteNote(event) {
         background: '#242947',  // Custom background color
         color: '#fff',  // Custom text color
         confirmButtonColor: '#505883',  // Custom confirm button color
-        cancelButtonColor: '#dc3545',  // Custom cancel button color
+        cancelButtonColor: '#b93945',  // Custom cancel button color
         showCancelButton: true,
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'Cancel'
