@@ -54,10 +54,10 @@ function handleDeleteNote(event) {
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
         icon: 'warning',
-        background: '#242947',  // Custom background color
-        color: '#fff',  // Custom text color
-        confirmButtonColor: '#505883',  // Custom confirm button color
-        cancelButtonColor: '#b93945',  // Custom cancel button color
+        background: '#242947',
+        color: '#fff', 
+        confirmButtonColor: '#505883',
+        cancelButtonColor: '#b93945',
         showCancelButton: true,
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'Cancel'
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = new Date().getFullYear();
 });
 
-// Back to Top button functionality
+// back to top
 const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
