@@ -1,41 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
 body {
-    background-color: #f0f2f5;
-    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to top right, #0D1333, #1f2a68, #0D1333);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.container {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+.title {
+    font-family: 'Itim', cursive;
+    font-size: 2.5rem;
 }
 
-.note-item {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    margin-bottom: 1rem;
-    transition: transform 0.2s;
+.modal-content {
+    font-weight: 500;
+    border-radius: 2rem;
+    background-color: #242947;
+    border: 2px solid #dddddd57;
+    padding: 10px 20px;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
-.note-item:hover {
-    transform: scale(1.02);
+.form-control {
+    font-weight: 500;
+    border-radius: 1rem;
+    background-color: #242947;
+    border: 2px solid #dddddd57;
+    color: #333;
+    padding: 10px 20px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
-.note-item h5 {
-    font-weight: 600;
+.form-control::placeholder {
+    color: #333;
+    opacity: 0.8;
 }
 
-.note-item p {
-    margin-bottom: 0.5rem;
-    color: #6c757d;
+.form-control:focus {
+    border-color: #dddddd;
+    background-color: #2c3e50;
+    color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.note-item small {
-    color: #adb5bd;
+.form-control:focus::placeholder {
+    color: #ffffff;
+    opacity: 1;
 }
 
-.form-label {
-    font-weight: 600;
+.card {
+    font-weight: 500;
+    border-radius: 2rem;
+    background-color: #242947;
+    border: 2px solid #dddddd15;
+    color: #333;
+    padding: 10px 20px;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.btn-custom {
+    font-weight: 500;
+    border-radius: 2rem;
+    background-color: #242947;
+    border: 2px solid #dddddd15;
+    color: #ffffff;
+    padding: 10px 18px;
+    transition: background-color 0.3s, border-color 0.3s;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+    color: #ffffff;
+    background-color: #32385a;
+    border: 2px solid #dddddd3e;
+}
+
+.text-date {
+    font-family: 'Bubblegum Sans', cursive;
+    color: #ffffff91;
+    font-size: .9rem;
+}
+
+.card-title {
+    color: #858cb6;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-family: 'Itim', cursive;
+    font-weight: 400;
+    color: #ffffffe4;
+    font-size: 1.1rem;
+}
+
+#backToTop {
+    color: #ffffffe4;
+    background-color: #32385a96;
+    border: 2px solid #dddddd3e;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+    z-index: 10;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fa-1x {
+    font-size: 20px;
+}
+
+.swal2-popup {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.swal2-modal {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
